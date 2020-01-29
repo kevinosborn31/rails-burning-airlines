@@ -22,10 +22,13 @@ u4 = User.create!(name: 'Luke', admin: false)
 
 Flight.destroy_all
 
-f1 = Flight.create!(date: '20/07/2021' , origin: 'Sydney', destination: 'London', airplane: a1)
-f2 = Flight.create!(date: '20/04/2020' , origin: 'London', destination: 'Sydney', airplane: a2)
-f3 = Flight.create!(date: '10/05/2021' , origin: 'New York', destination: 'Los Angeles', airplane: a2)
-f4 = Flight.create!(date: '05/12/2025' , origin: 'Madrid', destination: 'Athens', airplane: a3)
+f1 = Flight.create!(date: '20/07/2021' , origin: 'Sydney', destination: 'London', airplane: a1, number: 58)
+f2 = Flight.create!(date: '20/04/2020' , origin: 'London', destination: 'Sydney', airplane: a2, number: 98)
+f3 = Flight.create!(date: '10/05/2021' , origin: 'New York', destination: 'Los Angeles', airplane: a2, number: 15)
+f4 = Flight.create!(date: '05/12/2025' , origin: 'Madrid', destination: 'Rome', airplane: a3, number: 12)
+f5 = Flight.create!(date: '05/12/2025' , origin: 'Sydney', destination: 'London', airplane: a3, number: 04)
+f6 = Flight.create!(date: '05/12/2025' , origin: 'Rome', destination: 'Sydney', airplane: a3, number: 48)
+f7 = Flight.create!(date: '05/12/2025' , origin: 'London', destination: 'Rome', airplane: a3, number: 23)
 
 Reservation.destroy_all
 
