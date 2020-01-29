@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-01-29
+  origin: MyString
+  destination: MyString
+
+two:
+  date: 2020-01-29
+  origin: MyString
+  destination: MyString
