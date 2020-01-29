@@ -1,10 +1,15 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
 
+  before_action :allow_cors
+  skip_before_action :verify_authenticity_token, raise: false
+
+
   # GET /airplanes
   # GET /airplanes.json
   def index
-    @airplanes = Airplane.all
+      @airplanes = Airplane.all
+      render json: @airplanes
   end
 
   # GET /airplanes/1

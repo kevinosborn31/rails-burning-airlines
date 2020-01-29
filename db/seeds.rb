@@ -8,21 +8,26 @@
 
 Airplane.destroy_all
 
-Airplane.create(name: '747', rows: 20, columns: 4)
-Airplane.create(name: '423', rows: 10, columns: 2)
-Airplane.create(name: '590', rows: 5, columns: 1)
-Airplane.create(name: '302', rows: 100, columns: 5)
+a1 = Airplane.create!(name: '747', rows: 20, columns: 4)
+a2 = Airplane.create!(name: '423', rows: 10, columns: 2)
+a3 = Airplane.create!(name: '590', rows: 5, columns: 1)
+a4 = Airplane.create!(name: '302', rows: 100, columns: 5)
 
 User.destroy_all
 
-User.create(name: 'Kevin', admin: true)
-User.create(name: 'Sree', admin: true)
-User.create(name: 'Harry', admin: true)
-User.create(name: 'Luke', admin: false)
+u1 = User.create!(name: 'Kevin', admin: true)
+u2 = User.create!(name: 'Sree', admin: true)
+u3 = User.create!(name: 'Harry', admin: true)
+u4 = User.create!(name: 'Luke', admin: false)
 
 Flight.destroy_all
 
-Flight.create(date: '20/07/2021' , origin: 'Sydney', destination: 'London')
-Flight.create(date: '20/04/2020' , origin: 'London', destination: 'Sydney')
-Flight.create(date: '10/05/2021' , origin: 'New York', destination: 'Los Angeles')
-Flight.create(date: '05/12/2025' , origin: 'Madrid', destination: 'Athens')
+f1 = Flight.create!(date: '20/07/2021' , origin: 'Sydney', destination: 'London', airplane: a1)
+f2 = Flight.create!(date: '20/04/2020' , origin: 'London', destination: 'Sydney', airplane: a2)
+f3 = Flight.create!(date: '10/05/2021' , origin: 'New York', destination: 'Los Angeles', airplane: a2)
+f4 = Flight.create!(date: '05/12/2025' , origin: 'Madrid', destination: 'Athens', airplane: a3)
+
+Reservation.destroy_all
+
+r1 = Reservation.create!(row: 'A', column: 2, user: u1, flight: f1)
+r2 = Reservation.create!(row: 'B', column: 3, user: u2, flight: f1)
