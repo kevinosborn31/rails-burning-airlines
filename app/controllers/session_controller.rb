@@ -11,7 +11,7 @@ class SessionController < ApplicationController
 
       session[:user_id] = user.id
 
-      redirect_to '/' # go to show page (/users/10 etc)
+      redirect_to '/users' # go to show page (/users/10 etc)
 
     else
     flash[:error] = 'Invalid email or password'

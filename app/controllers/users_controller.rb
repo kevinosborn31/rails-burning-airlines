@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   #Certain pages not visible if you arent logged in
   before_action :check_if_logged_in, except: [ :new, :create ]
+  :check_if_admin
 
   # Lock down admin pages
   # before_action :check_if_admin, only: [ :index ]
