@@ -21,6 +21,7 @@ end
 
 def destroy
   session[:user_id] = nil # logs out the user
+  flash[:notice] = "You have been logged out"
   redirect_to login_path
 end
 end

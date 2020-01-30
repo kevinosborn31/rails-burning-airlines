@@ -19,13 +19,13 @@
     </div>
     <div class="right-nav">
     <% if @current_user.present? %>
-          Logged in as <%= @current_user.name %>
+          Logged in as <a href="users/<%= @current_user.id %>"><%= @current_user.name %></a>
           <% if @current_user.admin? %>
           (admin)
           <%= link_to "New Airplane", new_airplane_path, :class => "mdl-button" %>
           <%= link_to "New Flight", new_flight_path, :class => "mdl-button" %>
           <% end %>
-          <%= link_to "Logout", login_path, method: 'delete', :class => "mdl-button" %>
+          <%= link_to "Logout", login_path, method: 'delete', :class => "mdl-button", :onClick => 'alert("You have been logged out")'%>
           <% else %>
           <%= link_to "Login", login_path, :class => "mdl-button"  %>
           <%= link_to 'Sign Up', new_user_path, :class => "mdl-button" %>

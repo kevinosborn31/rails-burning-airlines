@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="mdl-textfield mdl-js-textfield">
+    <%= form.label :name%>
+    <%= form.text_field :name, :class => "field-long" %>
   </div>
 
-  <div class="field">
+  <div class="mdl-textfield mdl-js-textfield">
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="mdl-textfield mdl-js-textfield">
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
 
-  <div class="field">
+  <div class="mdl-textfield mdl-js-textfield">
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation %>
   </div>
 
-  <div class="field">
+  <div class="mdl-textfield mdl-js-textfield">
     <%= form.label :admin %>
     <%= form.check_box :admin %>
   </div>
