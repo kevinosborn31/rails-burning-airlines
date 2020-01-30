@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   # Lock down admin pages
   # before_action :check_if_admin, only: [ :index ]
-
+  def home
+  end
   def new
     @user = User.new
   end
