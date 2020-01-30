@@ -14,6 +14,8 @@
           Logged in as <%= @current_user.name %>
           <% if @current_user.admin? %>
           (admin)
+          <%= link_to "New Airplane", new_airplane_path, :class => "mdl-button" %>
+          <%= link_to "New Flight", new_flight_path, :class => "mdl-button" %>
           <% end %>
           <%= link_to "Logout", login_path, method: 'delete', :class => "mdl-button" %>
           <% else %>

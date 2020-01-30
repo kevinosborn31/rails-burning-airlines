@@ -1,5 +1,6 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
+  before_action :check_if_admin, only: [:new]
   # before_action :authorize_admin, only: :new
 
 
