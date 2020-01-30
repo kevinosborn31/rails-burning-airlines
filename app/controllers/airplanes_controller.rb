@@ -1,7 +1,9 @@
 class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
+  # before_action :authorize_admin, only: :new
 
-  before_action :allow_cors
+
+  # before_action :allow_cors
   skip_before_action :verify_authenticity_token, raise: false
 
 

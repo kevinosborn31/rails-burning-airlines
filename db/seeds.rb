@@ -15,10 +15,12 @@ a4 = Airplane.create!(name: '302', rows: 100, columns: 5)
 
 User.destroy_all
 
-u1 = User.create!(name: 'Kevin', admin: true)
-u2 = User.create!(name: 'Sree', admin: true)
-u3 = User.create!(name: 'Harry', admin: true)
-u4 = User.create!(name: 'Luke', admin: false)
+User.destroy_all
+u1 = User.create! name:"Kevin", email: "kevin@gmail.com", password: 'chicken', admin: true
+u2 = User.create! name:"Harry", email: "harry@gmail.com", password: 'chicken', admin: true
+u3 = User.create! name:"Sree", email: "sree@gmail.com", password: 'chicken', admin: true
+u4 = User.create! name:"Luke", email: "luke@gmail.com", password: 'chicken', admin: false
+
 
 Flight.destroy_all
 

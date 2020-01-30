@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
   resources :reservations
   resources :flights
   resources :users

@@ -68,6 +68,13 @@ class FlightsController < ApplicationController
       @flight = Flight.find(params[:id])
     end
 
+    def allow_cors
+    headers['Access-Control-Allow-Origin'] = '*'
+    end
+
+    before_action :allow_cors
+    skip_before_action :verify_authenticity_token, raise: false
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
       params.require(:flight).permit(:date, :origin, :destination, :airplane_id, :number)
