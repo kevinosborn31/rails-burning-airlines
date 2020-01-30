@@ -3,6 +3,8 @@ class FlightsController < ApplicationController
   before_action :check_if_admin, only: [:new]
 
 
+  before_action :allow_cors
+  skip_before_action :verify_authenticity_token, raise: false
   # GET /flights
   # GET /flights.json
   def index

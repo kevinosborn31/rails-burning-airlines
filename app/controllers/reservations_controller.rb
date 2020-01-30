@@ -3,8 +3,12 @@ class ReservationsController < ApplicationController
 
   # GET /reservations
   # GET /reservations.json
+  before_action :allow_cors
+  skip_before_action :verify_authenticity_token, raise: false
+
   def index
     @reservations = Reservation.all
+    render json: @reservations
   end
 
   # GET /reservations/1
