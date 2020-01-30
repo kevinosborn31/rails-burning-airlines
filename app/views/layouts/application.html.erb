@@ -13,6 +13,11 @@
   </head>
 
   <body>
+    <nav class="top-nav">
+    <div class="left-nav">
+      <%= link_to "Home Page", root_path, :class => "mdl-button" %>
+    </div>
+    <div class="right-nav">
     <% if @current_user.present? %>
           Logged in as <%= @current_user.name %>
           <% if @current_user.admin? %>
@@ -25,6 +30,9 @@
           <%= link_to "Login", login_path, :class => "mdl-button"  %>
           <%= link_to 'Sign Up', new_user_path, :class => "mdl-button" %>
           <% end %>
+        </div>
+      </nav>
+        <br>
     <%= yield %>
 
   </body>
